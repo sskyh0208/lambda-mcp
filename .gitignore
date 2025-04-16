@@ -1,0 +1,12 @@
+.aws/credentials
+.DS_Store
+.env
+
+backend.hcl
+.terraform
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+.build
+__pycache__

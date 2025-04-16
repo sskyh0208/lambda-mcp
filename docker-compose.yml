@@ -1,0 +1,12 @@
+services:
+  aws-lambda-mcp-terraform:
+    container_name: aws-lambda-mcp-terraform
+    build:  
+      context: .docker/terraform
+      dockerfile: Dockerfile
+    volumes: 
+      - ./src/terraform:/src/terraform
+      - ./src/lambda:/src/lambda
+      - ./.aws:/root/.aws
+    working_dir: /src/terraform
+    tty: true
